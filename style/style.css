@@ -1,5 +1,109 @@
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url(url("https://fonts.googleapis.com/css2?family-Dancing+Script:wght@600&display=swap");
 :root {
-    --AZUL: #673ae3;
+    --AZUL: #38266a;
     --BRANCO: #ffffff;
     --CINZA: #524c4c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--AZUL);
+    background-repeat: no-repeat;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    text-align: center;
+    margin: 30px 50px 20px 50px;
+}
+
+main h1 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.5em - 1.5em 0;
+}
+
+.link {
+    color: white;
+    height: 50px;
+    width: 100%;
+    border: #38266a margin-top: 1.3rem;
+    transform: skew(10deg);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: oblique;
+    color: var(--CINZA)
+}
+
+.conteudo {
+    font-size: 30px;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 2px 2px 2px 2px;
+}
+
+
+/*COMECO DO BLOCO  UNDERLINE ANIMATION */
+
+.user {
+    border-radius: 50px;
+    max-width: 100px;
+    box-shadow: 0 0 10px 3px #2a2e2e;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user img {
+    filter: grayscale();
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid whitesmoke;
+    margin-bottom: 1rem;
+    transition: filter 0.4s ease-in-out;
+}
+
+.user:hover img {
+    filter: none;
+}
+
+.titulo-perfil {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    color: whitesmoke;
+    position: relative;
+}
+
+.titulo-perfil::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: whitesmoke;
+    left: 50%;
+    bottom: -10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.user:hover .titulo-perfil::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/*FINAL DO BLOCO  UNDERLINE ANIMATION */
